@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>John Doe | Portfolio</title>
+  <style>
+    :root {
+      --primary-color: #6a11cb;
+      --secondary-color: #2575fc;
+      --text-color: #fff;
+      --bg-color: #1c1f2b;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      color: var(--text-color);
+    }
+
+    nav {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 15px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #ffeb3b;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    header img {
+      width: 130px;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      margin-bottom: 20px;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 960px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .about p {
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+
+    .skills {
+      text-align: center;
+    }
+
+    .skill-slide {
+      display: none;
+      font-size: 1.5rem;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 10px;
+      margin: 20px auto;
+      width: 60%;
+    }
+
+    .slide-controls {
+      margin-top: 10px;
+    }
+
+    .slide-controls button {
+      background: #fff;
+      color: #000;
+      border: none;
+      padding: 10px 15px;
+      margin: 5px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .projects .project {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+    }
+
+    .contact p {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    .social-links a {
+      text-decoration: none;
+      color: #fff;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.6);
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <img src="https://via.placeholder.com/130" alt="Profile Photo" />
+    <h1>John Doe</h1>
+    <p>Frontend Developer | UI/UX Designer | Tech Explorer</p>
+  </header>
+
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>I’m a web developer passionate about crafting responsive and engaging websites. I specialize in frontend development and love combining clean design with functionality.</p>
+    <p><strong>Education:</strong> B.Tech in Computer Science, XYZ University</p>
+    <p><strong>Experience:</strong> Interned at ABC Tech as a frontend developer.</p>
+  </section>
+
+  <section id="skills" class="skills">
+    <h2>Skills</h2>
+    <div class="skill-slide">HTML5</div>
+    <div class="skill-slide">CSS3</div>
+    <div class="skill-slide">JavaScript</div>
+    <div class="skill-slide">React.js</div>
+    <div class="skill-slide">Tailwind CSS</div>
+    <div class="skill-slide">Git & GitHub</div>
+    <div class="skill-slide">Figma</div>
+
+    <div class="slide-controls">
+      <button onclick="changeSlide(-1)">Prev</button>
+      <button onclick="changeSlide(1)">Next</button>
+    </div>
+  </section>
+
+  <section id="projects" class="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Portfolio Website</h3>
+      <p>Responsive site showcasing my resume, skills, and projects.</p>
+    </div>
+    <div class="project">
+      <h3>ZeroPlastic</h3>
+      <p>A MERN-based sustainable shopping directory to reduce plastic use.</p>
+    </div>
+    <div class="project">
+      <h3>Complaint Management System</h3>
+      <p>Web app for users to file and track complaints efficiently.</p>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <p>Email: johndoe@email.com</p>
+    <p>Phone: +91-9876543210</p>
+    <div class="social-links">
+      <a href="#">GitHub</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">Twitter</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 John Doe. All rights reserved.</p>
+  </footer>
+
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll(".skill-slide");
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.style.display = i === index ? "block" : "none";
+      });
+    }
+
+    function changeSlide(direction) {
+      currentSlide = (currentSlide + direction + slides.length) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    // Initial display
+    showSlide(currentSlide);
+  </script>
+
+</body>
+</html>
